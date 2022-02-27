@@ -8,11 +8,64 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
     <div id="root">
-        <!-- content here -->
+        <!-- all content here -->
+
+        <!-- header (data-behaviour=standard|fixed) -->
+        <header
+            class="header"
+            data-behaviour="standard"
+        >
+            <div class="header__container">
+                <p>header</p>
+            </div>
+        </header>
+
+        <!-- main content -->
+        <main class="main">
+            <h1>Template for front-end project</h1>
+
+            <button
+                class=""
+                data-for="pop-up"
+                data-target="#pop-up0"
+            >
+                modal
+            </button>
+
+            <section>
+                <h2>Section</h2>
+            </section>
+
+            <section>
+                <h2>Section</h2>
+            </section>
+
+            <div
+                id="#pop-up0"
+                class="pop-up"
+            >
+                <div class="pop-up__container">
+                    <!-- content -->
+                    <button class="pop-up__close">
+                        close
+                    </button>
+                    <h3>Popup content</h3>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- footer content -->
+        <footer>
+            <p>footer</p>
+        </footer>
     </div>
 
     <script src="./dist/js/main.js" defer></script>
