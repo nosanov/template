@@ -3,6 +3,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import { initPopup } from './components/pop-up';
 import { initHeader } from './components/header';
+import { initOwlCarousel } from './components/owl';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initPopup();
     initHeader();
+    initOwlCarousel();
 });
