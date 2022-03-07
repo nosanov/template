@@ -1,49 +1,34 @@
-/*
-** TODO: rewrite this with Class
-*/
+export default class Popup {
 
-function initPopup() {
-
-    const srcButtons = document.querySelectorAll('[data-for="pop-up"]');
-    const body = document.body;
-
-    if (srcButtons.length) {
-        const popUps = document.querySelectorAll('.pop-up');
-
-        if (!popUps.length) {
-            console.error('No one "pop-up" was found');
-            return;
-        }
-
-        srcButtons.forEach(button => {
-
-            button.addEventListener('click', () => {
-                const targetHash = button.dataset.target;
-                const popUp = document.getElementById(targetHash);
-
-                if (!popUp) {
-                    console.error('Pop-up for this target not found');
-                    return;
-                }
-
-                popUp.classList.add('visible');
-                body.classList.add('fixed');
-            });
-        });
-
-        popUps.forEach(popUp => {
-            const closeBtn = popUp.querySelector('.pop-up__close');
-
-            if (!closeBtn) {
-                console.error(popUp, 'has no close button');
-            } else {
-                closeBtn.addEventListener('click', () => {
-                    popUp.classList.remove('visible');
-                    body.classList.remove('fixed');
-                });
+    constructor(el) {
+        this.el = el;
+        this.popUp = document.getElementById(this.el);
+        document.querySelectorAll('[data-for="pop-up"]').forEach(button => {
+            if (button.dataset.target == this.el) {
+                this.openBtn = button;
             }
         });
+        if (!this.openBtn) {
+            console.error(this.popUp, 'has no open button');
+        } else {
+            this.openBtn.addEventListener('click', () => {
+                this.show(this.popUp);
+            });
+        }
+
+        this.closeBtn = this.popUp.querySelector('.pop-up__close');
+        this.closeBtn.addEventListener('click', () => {
+            this.hide(this.popUp);
+        });
+    }
+
+    show(popUp) {
+        popUp.classList.add('visible');
+        document.body.classList.add('fixed');
+    }
+
+    hide(popUp) {
+        popUp.classList.remove('visible');
+        document.body.classList.remove('fixed');
     }
 }
-
-export { initPopup };

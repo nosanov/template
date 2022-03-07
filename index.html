@@ -23,6 +23,7 @@
         <!-- header (data-behaviour=standard|fixed) -->
         <header
             class="header"
+            id="header"
             data-behaviour="standard"
         >
             <div class="header__container">
@@ -58,6 +59,14 @@
                   <div style="border: 1px solid #333;"> Your Content6 </div>
                   <div style="border: 1px solid #333;"> Your Content7 </div>
                 </div>
+
+                <button
+                    class=""
+                    data-for="pop-up"
+                    data-target="#pop-up1"
+                >
+                    modal
+                </button>
             </section>
 
             <div
@@ -70,6 +79,20 @@
                         close
                     </button>
                     <h3>Popup content</h3>
+
+                </div>
+            </div>
+
+            <div
+                id="#pop-up1"
+                class="pop-up"
+            >
+                <div class="pop-up__container">
+                    <!-- content -->
+                    <button class="pop-up__close">
+                        close
+                    </button>
+                    <h3>Popup content #1</h3>
 
                 </div>
             </div>
