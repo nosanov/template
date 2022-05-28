@@ -4,7 +4,7 @@
 
 function initOwlCarousel () {
     $(".owl-carousel").owlCarousel({
-        loop: true,
+        loop: false,
         margin: 40,
         responsive:{
             0: {

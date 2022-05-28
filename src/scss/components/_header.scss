@@ -1,0 +1,86 @@
+.header {
+    background: $grey-transparent;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $z-index + 5;
+
+    width: 100%;
+    height: $header-height;
+
+    @extend %transition-default;
+    transition-property: transform;
+
+    &--collapsed {
+        transform: translateY(-101%);
+    }
+
+    &__container {
+        // @extend %flex-row-center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    &__button {
+        background: none;
+        border: none;
+
+        display: block;
+
+        position: relative;
+        transition: none;
+
+        @media (hover: hover) {
+            &:hover {
+                background: inherit;
+
+                span {
+                    &:last-child {
+                        width: 32px;
+                    }
+                }
+            }
+        }
+
+        .button__container {
+            @extend %started;
+            padding: 0;
+            position: relative;
+        }
+
+        span {
+            background: $white;
+            border-radius: 2px;
+
+            display: block;
+
+            margin-bottom: 5px;
+
+            @extend %transition-default;
+            transition-property: width;
+
+            width: 32px;
+            height: 2px;
+
+            &:last-child {
+                margin-bottom: 0;
+
+                width: 16px;
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+    }
+
+    &__logo {
+        display: block;
+        width: 56px;
+        height: auto;
+    }
+}

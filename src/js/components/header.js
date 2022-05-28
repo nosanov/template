@@ -33,14 +33,19 @@ export default class Header {
         let ticking = false;
 
         function toggleHeader(last_scroll_pos, prev_scroll_pos) {
-            if (last_scroll_pos > prev_scroll_pos) {
-                // scrolled down
-                header.classList.add('header--collapsed');
-            } else {
-                // scrolled up
-                header.classList.remove('header--collapsed');
+            if (!header.classList.contains('header--freezed')) {
+                if (last_scroll_pos > prev_scroll_pos) {
+                    // scrolled down
+                    header.classList.add('header--collapsed');
+                } else {
+                    // scrolled up
+                    header.classList.remove('header--collapsed');
+                }
+                prev_scroll_position = last_known_scroll_position;
+
+                // Safari fix
+                if (last_known_scroll_position <= 0) header.classList.remove('header--collapsed');
             }
-            prev_scroll_position = last_known_scroll_position;
         }
 
         window.addEventListener('scroll', (ev) => {

@@ -1,0 +1,140 @@
+.intro {
+    background: $grey;
+
+    &__container {
+        overflow: hidden;
+        padding-top: 154px;
+    }
+
+    &__title {
+        color: $white;
+
+        @extend %font-manrope;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 4.6rem;
+
+        margin-bottom: 25px;
+    }
+
+    &__description {
+        color: $white;
+
+        @extend %font-manrope;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2.2rem;
+
+        margin-bottom: 46px;
+        max-width: 410px;
+    }
+
+    &__scroll-btn {
+        background: transparent;
+        border: 1px solid $grey-light;
+        border-radius: 50%;
+        box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.25);
+
+        @extend %centered;
+
+        @extend %transition-default;
+        transition-property: background-color, border-color;
+
+        width: 65px;
+        height: 65px;
+
+        svg path,
+        svg line {
+            @extend %transition-default;
+            transition-property: stroke;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                border-color: $green;
+    
+                svg path,
+                svg line {
+                    stroke: $green;
+                }
+            }
+        }
+    }
+
+    &__marquee-container {
+        position: relative;
+
+        width: 100%;
+        height: 430px;
+    }
+
+    &__marquee {
+        display: flex;
+        flex-direction: row;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &--top {
+            transform: rotate(-7deg);
+        }
+
+        &--bottom {
+            top: unset;
+            bottom: 50px;
+            transform: rotate(7deg);
+        }
+    }
+
+    &__image {
+        display: block;
+
+        margin-right: 25px;
+
+        max-width: 480px;
+        width: 280 * 100vw / 320;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (min-width: $breakpoint-lg) {
+
+        &__marquee {
+            flex-direction: column;
+
+            &--top {
+                left: unset;
+                // right: 425 * 70vw / 1440; // 270px
+                right: 425 * 80vw / 1440;
+                transform: rotate(7deg);
+            }
+
+            &--bottom {
+                // right: -227px; // -227px
+                right: -425 * 50vw / 1440;
+                bottom: 0;
+                left: unset;
+            }
+        }
+
+        &__image {
+            margin-right: 0;
+
+            width: 425 * 100vw / 1440;
+            height: auto;
+        }
+    }
+
+    @media (min-width: $breakpoint-xl) {
+
+        &__title {
+            font-size: 4.8rem;
+            line-height: 6.2rem;
+        }
+    }
+}

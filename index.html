@@ -8,12 +8,16 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- owl -->
     <link rel="stylesheet" href="./dist/css/libs/owl.carousel.min.css">
     <link rel="stylesheet" href="./dist/css/libs/owl.theme.default.min.css">
 
+    <!-- main css -->
     <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
@@ -26,47 +30,212 @@
             id="header"
             data-behaviour="standard"
         >
-            <div class="header__container">
-                <p>header</p>
+            <div class="header__container container row row-center-y">
+                <button class="button header__button"
+                    data-for="pop-up"
+                    data-target="#pop-up--menu"
+                >
+                    <div class="button__container column">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <nav class="header__nav">
+                    <ul>
+                        <li><a data-type="anchor" href="#intro">Intro</a></li>
+                        <li><a data-type="anchor" href="#pop-ups">Pop-ups</a></li>
+                        <li><a data-type="anchor" href="#carousels">Carousels</a></li>
+                        <li><a data-type="anchor" href="#forms">Forms</a></li>
+                    </ul>
+                </nav>
+                <img class="header__logo" src="./assets/icons/logo.svg" alt="RACE agency" />
             </div>
         </header>
 
         <!-- main content -->
         <main class="main">
-            <h1>Template for front-end project</h1>
-
-            <button
-                class=""
-                data-for="pop-up"
-                data-target="#pop-up0"
-            >
-                modal
-            </button>
-
-            <section>
-                <h2>Section</h2>
+            <section id="intro" class="intro">
+                <div class="intro__container container">
+                    <h1 class="intro__title">Template for<br> front-end project</h1>
+                    <p class="intro__description">With columns, rows, groups, pop-ups, carousels, tabs, pictures, buttons, anchors, hovers, effects (like parallax, transforms) and so on..</p>
+                    <a class="intro__scroll-btn" 
+                        data-type="anchor"
+                        href="#pop-ups"
+                    >
+                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 7.02158L6.05556 12.0771L11.1111 7.02158" stroke="#C4C4C4"/>
+                            <line x1="5.93799" x2="5.93799" y2="11.7963" stroke="#C4C4C4"/>
+                        </svg>
+                    </a>
+                    <div class="intro__marquee-container">
+                        <div class="intro__marquee intro__marquee--top">
+                            <picture class="intro__image lazy-picture">
+                                <source 
+                                    type="image/webp" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-0.webp, ./assets/images/intro/intro__example-0--retina.webp 2x"
+                                >
+                                <source 
+                                    type="image/jpeg" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-0.jpg, ./assets/images/intro/intro__example-0--retina.jpg 2x"
+                                >
+                                <img width="280" height="177" src="./assets/images/pix.png" data-src="./assets/images/intro/intro__example-0.jpg, ./assets/images/intro/intro__example-0--retina.jpg 2x" alt="why-not realty" loading="lazy">
+                            </picture>
+                            <picture class="intro__image lazy-picture">
+                                <source 
+                                    type="image/webp" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-1.webp, ./assets/images/intro/intro__example-1--retina.webp 2x"
+                                >
+                                <source 
+                                    type="image/jpeg" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-1.jpg, ./assets/images/intro/intro__example-1--retina.jpg 2x"
+                                >
+                                <img width="280" height="177" src="./assets/images/pix.png" data-src="./assets/images/intro/intro__example-1.jpg, ./assets/images/intro/intro__example-1--retina.jpg 2x" alt="why-not realty" loading="lazy">
+                            </picture>
+                            <picture class="intro__image lazy-picture">
+                                <source 
+                                    type="image/webp" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-2.webp, ./assets/images/intro/intro__example-2--retina.webp 2x"
+                                >
+                                <source 
+                                    type="image/jpeg" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-2.jpg, ./assets/images/intro/intro__example-2--retina.jpg 2x"
+                                >
+                                <img width="280" height="177" src="./assets/images/pix.png" data-src="./assets/images/intro/intro__example-2.jpg, ./assets/images/intro/intro__example-2--retina.jpg 2x" alt="why-not realty" loading="lazy">
+                            </picture>
+                            <picture class="intro__image lazy-picture">
+                                <source 
+                                    type="image/webp" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-3.webp, ./assets/images/intro/intro__example-3--retina.webp 2x"
+                                >
+                                <source 
+                                    type="image/jpeg" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-3.jpg, ./assets/images/intro/intro__example-3--retina.jpg 2x"
+                                >
+                                <img width="280" height="177" src="./assets/images/pix.png" data-src="./assets/images/intro/intro__example-3.jpg, ./assets/images/intro/intro__example-3--retina.jpg 2x" alt="why-not realty" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="intro__marquee intro__marquee--bottom">
+                            <picture class="intro__image lazy-picture">
+                                <source 
+                                    type="image/webp" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-0.webp, ./assets/images/intro/intro__example-0--retina.webp 2x"
+                                >
+                                <source 
+                                    type="image/jpeg" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-0.jpg, ./assets/images/intro/intro__example-0--retina.jpg 2x"
+                                >
+                                <img width="280" height="177" src="./assets/images/pix.png" data-src="./assets/images/intro/intro__example-0.jpg, ./assets/images/intro/intro__example-0--retina.jpg 2x" alt="why-not realty" loading="lazy">
+                            </picture>
+                            <picture class="intro__image lazy-picture">
+                                <source 
+                                    type="image/webp" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-1.webp, ./assets/images/intro/intro__example-1--retina.webp 2x"
+                                >
+                                <source 
+                                    type="image/jpeg" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-1.jpg, ./assets/images/intro/intro__example-1--retina.jpg 2x"
+                                >
+                                <img width="280" height="177" src="./assets/images/pix.png" data-src="./assets/images/intro/intro__example-1.jpg, ./assets/images/intro/intro__example-1--retina.jpg 2x" alt="why-not realty" loading="lazy">
+                            </picture>
+                            <picture class="intro__image lazy-picture">
+                                <source 
+                                    type="image/webp" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-2.webp, ./assets/images/intro/intro__example-2--retina.webp 2x"
+                                >
+                                <source 
+                                    type="image/jpeg" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-2.jpg, ./assets/images/intro/intro__example-2--retina.jpg 2x"
+                                >
+                                <img width="280" height="177" src="./assets/images/pix.png" data-src="./assets/images/intro/intro__example-2.jpg, ./assets/images/intro/intro__example-2--retina.jpg 2x" alt="why-not realty" loading="lazy">
+                            </picture>
+                            <picture class="intro__image lazy-picture">
+                                <source 
+                                    type="image/webp" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-3.webp, ./assets/images/intro/intro__example-3--retina.webp 2x"
+                                >
+                                <source 
+                                    type="image/jpeg" 
+                                    srcset="./assets/images/pix.png" 
+                                    data-srcset="./assets/images/intro/intro__example-3.jpg, ./assets/images/intro/intro__example-3--retina.jpg 2x"
+                                >
+                                <img width="280" height="177" src="./assets/images/pix.png" data-src="./assets/images/intro/intro__example-3.jpg, ./assets/images/intro/intro__example-3--retina.jpg 2x" alt="why-not realty" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section>
-                <h2>Section</h2>
+            <section id="pop-ups" class="pop-ups" style="height: 100vh;">
+                <div class="pop-ups__container container">
+                    <h2 style="margin-bottom: 80px;">Pop-up section</h2>
+
+                    <div>
+                        <button
+                            class="button"
+                            data-for="pop-up"
+                            data-target="#pop-up0"
+                        >
+                            <div class="button__container">
+                                modal fullscreen
+                            </div>
+                        </button>
+
+                        <button
+                            class="button"
+                            data-for="pop-up"
+                            data-target="#pop-up1"
+                        >
+                            <div class="button__container">
+                                modal halfscreen
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="carousels" style="height: 100vh;">
+                <h2 style="margin-bottom: 80px;">Carousel section</h2>
 
                 <div class="owl-carousel">
-                  <div style="border: 1px solid #333;"> Your Content1 </div>
-                  <div style="border: 1px solid #333;"> Your Content2 </div>
-                  <div style="border: 1px solid #333;"> Your Content3 </div>
-                  <div style="border: 1px solid #333;"> Your Content4 </div>
-                  <div style="border: 1px solid #333;"> Your Content5 </div>
-                  <div style="border: 1px solid #333;"> Your Content6 </div>
-                  <div style="border: 1px solid #333;"> Your Content7 </div>
+                  <div style="border: 1px solid #333; height: 450px;"> Your Content1 </div>
+                  <div style="border: 1px solid #333; height: 450px;"> Your Content2 </div>
+                  <div style="border: 1px solid #333; height: 450px;"> Your Content3 </div>
+                  <div style="border: 1px solid #333; height: 450px;"> Your Content4 </div>
+                  <div style="border: 1px solid #333; height: 450px;"> Your Content5 </div>
+                  <div style="border: 1px solid #333; height: 450px;"> Your Content6 </div>
+                  <div style="border: 1px solid #333; height: 450px;"> Your Content7 </div>
                 </div>
+            </section>
 
-                <button
-                    class=""
-                    data-for="pop-up"
-                    data-target="#pop-up1"
+            <section id="forms" style="height: 100vh;">
+                <h2 style="margin-bottom: 80px;">Form section</h2>
+                <form 
+                    action=""
+                    id="form-0"
+                    class="form-0"
                 >
-                    modal
-                </button>
+                    <input class="form-0__name" type="text">
+                    <input class="form-0__phone" type="text">
+                    <input class="form-0__email" type="text">
+                    <input class="form-0__checkbox" type="checkbox" checked>
+                    <input type="submit" value="submit">
+                </form>
             </section>
 
             <div
@@ -75,25 +244,55 @@
             >
                 <div class="pop-up__container">
                     <!-- content -->
-                    <button class="pop-up__close">
-                        close
+                    <button class="button pop-up__close-button">
+                        <div class="button__container">
+                            <span>&times;</span>
+                        </div>
                     </button>
-                    <h3>Popup content</h3>
 
+                    <h3 style="margin-bottom: 30px;">Popup content</h3>
+                    <div style="border: 1px solid #fff; display: flex; justify-content: center; align-items: center; height: 350px;">350px</div>
+                    <div style="border: 1px solid #fff; display: flex; justify-content: center; align-items: center; height: 350px;">350px</div>
+                    <div style="border: 1px solid #fff; display: flex; justify-content: center; align-items: center; height: 350px;">350px</div>
+                    <div style="border: 1px solid #fff; display: flex; justify-content: center; align-items: center; height: 350px;">350px</div>
                 </div>
             </div>
 
             <div
                 id="#pop-up1"
-                class="pop-up"
+                class="pop-up pop-up--halfscreen"
+                data-halfscreen="true"
+                data-halfscreen-close="true"
             >
                 <div class="pop-up__container">
                     <!-- content -->
-                    <button class="pop-up__close">
-                        close
+                    <button class="button pop-up__close-button">
+                        <div class="button__container">
+                            <span>&times;</span>
+                        </div>
                     </button>
-                    <h3>Popup content #1</h3>
 
+                    <h3 style="margin-bottom: 30px;">Popup content #1</h3>
+                    <div style="border: 1px solid #fff; display: flex; justify-content: center; align-items: center; height: 350px;">height: 350px</div>
+                    <div style="border: 1px solid #fff; display: flex; justify-content: center; align-items: center; height: 350px;">height: 350px</div>
+                    <div style="border: 1px solid #fff; display: flex; justify-content: center; align-items: center; height: 350px;">height: 350px</div>
+                    <div style="border: 1px solid #fff; display: flex; justify-content: center; align-items: center; height: 350px;">height: 350px</div>
+                </div>
+            </div>
+
+            <div
+                id="#pop-up--menu"
+                class="pop-up menu__pop-up"
+            >
+                <div class="pop-up__container">
+                    <!-- content -->
+                    <button class="button pop-up__close-button">
+                        <div class="button__container">
+                            <span>&times;</span>
+                        </div>
+                    </button>
+
+                    <h3 style="margin-bottom: 30px;">Popup for menu</h3>
                 </div>
             </div>
         </main>
@@ -107,6 +306,8 @@
     <script src="./dist/js/libs/jquery.min.js" defer></script>
     <script src="./dist/js/libs/owl.carousel.min.js" defer></script>
 
+    <!-- <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script> -->
+    <script src="./dist/js/libs/scrollfix.js" defer></script>
     <script src="./dist/js/main.js" defer></script>
 </body>
 </html>

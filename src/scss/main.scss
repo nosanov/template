@@ -10,25 +10,55 @@
     padding: 0;
 
     outline: none;
-
     text-decoration: none;
 }
 
-@import './vars/__vars';
-@import './components/__pop-up';
-@import './components/__header';
+@import './vars/vars';
+@import './components/buttons';
+@import './components/pop-up';
+@import './components/header';
+
+@import './sections/intro';
+
+
+html, body {
+    font-size: $font-size-default;
+    scroll-behavior: smooth;
+}
 
 body {
+    min-width: $breakpoint-default;
+
+    overflow-y: scroll;
+
     &.fixed {
         overflow: hidden;
     }
 }
 
 main.main {
-    padding-top: $header-height;
+    // padding-top: $header-height;
 }
 
 section {
-    border: 2px dotted rgba(50, 50, 50, 0.9);
-    height: 80vh;
+    // 
+}
+
+h2 {
+    display: inline-block;
+    padding-bottom: 8px;
+    position: relative;
+
+    &:after {
+        background: $black;
+        content: '';
+        display: block;
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 1px;
+    }
 }
